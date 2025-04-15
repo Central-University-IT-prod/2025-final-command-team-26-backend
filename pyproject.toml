@@ -1,0 +1,31 @@
+[project]
+name = "films_backend"
+version = "0.1.0"
+description = "Films case backend made by Shakhov.Victory on FastAPI"
+requires-python = ">=3.13,<4.0"
+dependencies = [
+    "pydantic>=2.10.6",
+    "pydantic-settings>=2.8.1",
+]
+
+[dependency-groups]
+api = [
+    "fastapi>=0.115.9",
+    "passlib[argon2]>=1.7.4",
+    "pyjwt>=2.10.1",
+    "redis[hiredis]>=5.2.1",
+    "tortoise-orm[asyncpg]>=0.24.1",
+    "uvicorn>=0.34.0",
+    "httpx[socks]>=0.28.1",
+    "websockets>=15.0",
+]
+dev = [
+    "ruff>=0.9.9",
+]
+
+tests = [
+    "pytest>=7.2.2",
+]
+
+[tool.ruff.format]
+quote-style = "single"
